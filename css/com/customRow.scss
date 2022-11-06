@@ -1,0 +1,35 @@
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -40px;
+}
+
+.custom-col {
+    flex: 1 1 100%;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 40px;
+
+    @include mq($mq-md) {
+        flex: 1 1 33.33%;
+        width: 33.33%;
+    }
+
+    @include mq($mq-lg) {
+        flex: 1 1 25%;
+        width: 25%;
+    }
+
+    .custom-col--6 {
+    
+        @include mq($mq-md) {
+            flex: 1 1 50%;
+            width: 50%;
+        }
+    
+        @include mq($mq-lg) {
+            flex: 1 1 50%;
+            width: 50%;
+        }
+    }
+}

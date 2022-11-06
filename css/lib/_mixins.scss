@@ -1,0 +1,20 @@
+@import 'vars';
+
+@mixin font-size($fs, $fsb:$breakpoints) {
+    @each $fs-breakpoint, $fs-multiplier in $fsb {
+      @if $fs-breakpoint == null {
+        font-size: ($fs * $fs-multiplier * 1px);
+      }
+      @else {
+        @media screen and (min-width: $fs-breakpoint) {
+          font-size: ($fs * $fs-multiplier * 1px);
+        }
+      }
+    }
+  }
+
+  @mixin mq($display){
+    @media screen and ($display) {
+      @content;
+    };
+  }

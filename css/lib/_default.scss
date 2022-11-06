@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
+}
+
+.main {
+    &__inner {
+        box-shadow: 0 20px 50px rgba(51, 57, 75, 0.07);
+        border-radius: 9px;
+        padding: 40px 30px;
+    }
+}
+
+.m-hide {
+
+    @media screen and(max-width: 767px) {
+        display: none !important;
+    }
+}
+
+.m-show {
+    @media screen and (min-width: 768px) {
+        display: none !important;
+    }
+}
+
+h2 {    
+    @include font-size(18);
+    font-weight: 700;
+    line-height: 1.33333;
+    margin-bottom: 20px;
+    margin-top: 0;
+
+    strong {
+        @include font-size(36);
+        display: block;
+        font-weight: 700;
+        color: $primary;
+        margin-top: 7px;
+    }
+}
+
+h3 {
+    margin: 0 0;
+}

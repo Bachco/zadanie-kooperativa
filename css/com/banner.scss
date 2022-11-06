@@ -1,0 +1,184 @@
+@import '../lib/mixins';
+@import '../lib/vars';
+
+
+.banner {
+    position: relative;
+    margin-bottom: 100px;
+    
+    &__img {
+        position: relative;
+        border-radius: 22px;
+        overflow: hidden;
+        height: 435px;
+        width: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000000 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.9;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background-image: url('../img/banner-img.jpg'), linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000000 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.9;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 76%;
+
+        @include mq($mq-md) {
+            width: auto;
+        }
+
+        h1 {
+            @include font-size(60, $breakpoints-smallerr);
+            color: $white;
+            font-weight: 700;
+            line-height: 1.166666;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.banner-bottom {
+    color: $white;
+
+    h2 {
+        @include font-size(36);
+        font-weight: 700;
+        line-height: 1.166666;
+    }
+
+    a {
+        color: $white;
+    }
+
+    &__row {
+        display: flex;
+        box-shadow: 0 50px 100px rgba(33, 40, 73, 0.07);
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+
+        @include mq($mq-md) {  
+            flex-direction: row;     
+            margin: 0 -15px;   
+        }
+    }
+
+    &__col {
+        padding: 40px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        background-color: $primary;    
+
+        @include mq($mq-md) {
+            padding: 20px;            
+        }
+
+        @include mq($mq-lg) {
+            padding: 40px;            
+        }
+        &:not(:first-of-type) {
+            padding: 20px;
+            width: 100%;
+            flex: 1 1 100%;
+            color: $black;
+            background-color: $white;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            @include mq($mq-md) {
+                padding: 20px 0px 20px 59px;  
+                width: 33.33%;
+                flex: 1 0 33.33%;        
+            }
+
+            @include mq($mq-lg) {
+                padding: 20px 0px 20px 59px;  
+                width: 36.282%;
+                flex: 1 0 36.282%;          
+            }
+
+            a {
+                @include font-size(30, $breakpoints-smaller);
+                font-weight: 500;
+                color: $black;
+                text-decoration: none;
+                transition: color 200ms ease;
+                line-height: 1.333333;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            p {
+                @include font-size(16);
+                line-height: 1.5;
+                margin-bottom: 5px;
+                color: #404040;
+            }
+        }
+
+        &:first-of-type {
+            position: relative;
+
+            &::after{
+                content: '';
+                display: block;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='189' viewBox='0 0 45 189'%3E%3Cg%3E%3Cg transform='rotate(90 22.5 94.5)'%3E%3Cpath fill='%23c40109' d='M-72.005 116.486h18.997l34.133-44.49s12.68 10.75 22.471 16.348c33.886 19.335 75.054 28.142 109.947 28.142h3.452'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                position: absolute;
+                left: calc(100% - 1px);
+                top: 0;
+                bottom: 0;
+                width: 45px;
+            }
+        }
+    }
+
+    &__svg {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($black, 0.04);
+        margin-right: 30px;
+
+        svg {
+            display: block;
+        }
+    }
+}
+

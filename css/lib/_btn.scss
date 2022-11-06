@@ -1,0 +1,33 @@
+@import '../lib/mixins';
+
+.btn {
+    @include font-size(13);
+    background-color: $primary;
+    font-weight: 500;
+    line-height: 1;
+    padding: 16px;
+    border-radius: 7px;
+    color: $white;
+    transition: background-color 200ms ease-out;
+    display: inline-block;
+
+    &:hover, &:active, &:focus {
+        background-color: $secondary;
+        color: $black;
+        text-decoration: none;
+    }
+
+    &--secondary {
+        background-color: $secondary;
+        color: $black;
+
+        &:hover, &:active, &:focus {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    &:not(:first-of-type) {
+        margin-left: 19px;
+    }
+}

@@ -1,0 +1,114 @@
+@import '../lib/vars';
+@import '../lib/mixins';
+
+.footer {
+    padding: 60px 0;
+    margin-top: 110px;
+    border-top: 3px solid $primary;
+    background-color: $white;
+
+    h2 {
+        font-size: 13px !important;
+        color: $white;
+        display: inline-block;
+        background-color: $primary;
+        height: 26px;
+        line-height: 26px;
+        padding: 0 10px;
+        text-transform: uppercase;
+        border-radius: 13px;
+        border-bottom-left-radius: 6px;
+        font-weight: 700;
+        margin-bottom: 11px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            font-size: 13px;
+            line-height: 1.384615;
+            margin-bottom: 10px;
+
+            a {
+                color: $black;
+            }
+
+            &:first-child {
+                font-size: 15px;
+
+                a {
+                    color: $primary;
+                    font-weight: 700;       
+                }
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    &__right {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+
+        @include mq($mq-md) {
+            flex-basis: 35%;
+            width: 35%;
+        }
+
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &-info {
+            margin: 0;
+            text-align: right;
+
+            & > *:not(:last-child) {
+                margin: 0 0 30px;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 1.6666666;
+            }
+        }
+    }
+
+    &__left {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 0 15px;
+
+        @include mq($mq-md) {
+            flex-basis: 65%;
+            width: 65%;
+        }
+    }
+
+    &__social {
+
+        i {
+            font-size: 20px;
+            display: inline-block;
+            line-height: 1.8;
+            color: $primary;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+}

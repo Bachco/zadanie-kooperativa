@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zadanie Kooperativa</title>        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="fontawesome5/css/all.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__top container">
+                <div class="header__top-inner">
+                    <div class="header__logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="144" height="50" viewBox="0 0 144 50"><g><g><g><path fill="#d8232a" d="M132.647 21.597h-9.855l4.936-8.546zm-6.889-11.958a9.345 9.345 0 0 0-6.083 4.456l-.01.02-8.045 13.94h7.451l1.76-3.055c1.764 2 4.27 3.06 6.897 3.055h16.098l-3.728-6.458h-3.52a9.316 9.316 0 0 0-.806-7.502l-.007-.028L127.729.13 124 6.585z"/></g><g><path fill="#d8232a" d="M23.31 22.076c0 3.566-1.81 6.2-5.31 6.2-3.405 0-5.23-2.634-5.23-6.2 0-3.567 1.825-6.186 5.23-6.186 3.5 0 5.31 2.62 5.31 6.186M19.885 22c0-2.093-.313-4-1.886-4-1.5 0-1.792 1.907-1.792 4 0 2.177.33 3.934 1.792 3.934 1.573 0 1.886-1.757 1.886-3.934"/></g><g><path fill="#d8232a" d="M34.72 22.076c0 3.566-1.815 6.2-5.265 6.2-3.455 0-5.265-2.634-5.265-6.2 0-3.567 1.81-6.186 5.232-6.186 3.483 0 5.298 2.62 5.298 6.186M31.294 22c0-2.093-.294-4-1.84-4-1.526 0-1.831 1.907-1.831 4 0 2.177.377 3.934 1.832 3.934 1.545 0 1.84-1.757 1.84-3.934"/></g><g><path fill="#d8232a" d="M46.441 22c0 3.84-2.148 6.208-5.242 6.208-.729 0-1.378-.083-1.731-.208v4.823H36V16.779c1-.512 2.45-.889 4.574-.889 3.557 0 5.867 2.11 5.867 6.11M43 22c0-2.632-.636-4.07-2.48-4.07-.453 0-.765.07-1.049.178V26c.229.101.529.165.908.165C42.205 26.165 43 24.723 43 22"/></g><g><path fill="#d8232a" d="M57.764 21.79c0 .15-.007.33-.007.48l-7.151 1.02c.238 1.71 1.125 2.618 2.876 2.618 1.394 0 2.457-.306 3.098-.647l.797 2.15c-.955.493-2.282.866-4.303.866-3.649 0-5.744-2.412-5.744-6.226 0-3.745 1.941-6.161 5.38-6.161 3.43 0 5.054 2.306 5.054 5.9M54.546 21c0-2.142-.686-3.069-1.979-3.069-1.396 0-2.292 1.216-2.189 3.694L54.546 21"/></g><g><path fill="#d8232a" d="M65.484 15.945c-3.21-.151-5.067.201-6.394.844v11.283h3.446v-9.755c.578-.263 1.464-.317 2.302.067l.646-2.44"/></g><g><path fill="#d8232a" d="M75.478 27.396c-.99.528-2.607.88-4.666.88-3.452 0-5.222-1.276-5.222-3.765 0-3.079 3.074-3.987 6.66-4.32v-.555c0-1.241-.841-1.636-2.1-1.636-1.15 0-2.322.418-3.15.774l-.701-1.975a11.413 11.413 0 0 1 4.489-.909c2.692 0 4.69 1.11 4.69 4.368zm-3.228-5.602c-2.089.206-3.427.681-3.427 2.588 0 1.393.789 1.993 2.177 1.993.49 0 .937-.092 1.25-.246z"/></g><g><path fill="#d8232a" d="M83.198 27.903v-2.128c-.294.088-.44.132-.734.132-.784 0-1.1-.493-1.1-1.397v-6.161h1.834V16.11h-1.835V12.68l-3.454.889v2.542H76.6v2.238h1.309v6.43c0 1.838 1.091 3.457 3.58 3.457.805 0 1.415-.236 1.709-.334"/></g><g><path fill="#d8232a" d="M84.44 16.118h3.455v11.96H84.44zm1.724-1.804c-1.022 0-1.834-.716-1.834-1.622 0-.891.812-1.622 1.834-1.622 1.014 0 1.836.731 1.836 1.622 0 .906-.822 1.622-1.836 1.622z"/></g><g><path fill="#d8232a" d="M99.625 16.12H96.4L94.646 23a12.31 12.31 0 0 0-.305 1.804h-.048S94.26 23.92 94 23l-1.675-6.88H88.68l3.812 11.95h3.348l3.786-11.95"/></g><g><path fill="#d8232a" d="M109.686 27.396c-1.002.528-2.618.88-4.686.88-3.435 0-5.21-1.276-5.21-3.765 0-3.079 3.07-3.987 6.652-4.32v-.555c0-1.241-.837-1.636-2.089-1.636-1.156 0-2.353.418-3.108.774l-.746-1.975A11.433 11.433 0 0 1 105 15.89c2.678 0 4.686 1.11 4.686 4.368zm-3.236-5.602c-2.077.206-3.45.681-3.45 2.588 0 1.393.817 1.993 2.2 1.993.504 0 .953-.092 1.25-.246z"/></g><g><path fill="#d8232a" d="M13.081 28.06L8 20.468 12.729 14H8.687l-4.373 6.468h-.062V14H.17v14.06h4.083v-7.331h.062l4.34 7.331z"/></g><g><path fill="#d8232a" d="M.18 36.882h143.556v-2.19L.18 34.69z"/></g><g><path fill="#1a1919" d="M3.793 49.888h-.945L.21 42.19h1.26l1.851 5.602 1.85-5.602h1.28z"/></g><g><path fill="#1a1919" d="M7.59 49.888h1.215V42.19H7.59z"/></g><g><path fill="#1a1919" d="M10.93 49.888V42.19h5.129v1.047h-3.91v2.25h3.332v1.038H12.15v2.315h3.91v1.048z"/></g><g><path fill="#1a1919" d="M22.685 49.888L19 44.47v5.417h-1.24V42.19h1.117l3.707 5.408V42.19h1.218v7.698z"/></g><g><path fill="#1a1919" d="M30.855 49.888l-3.709-5.417v5.417H25.93V42.19H27l3.752 5.408V42.19H32v7.698z"/></g><g><path fill="#1a1919" d="M38.705 49.888l-.555-1.546H35l-.566 1.546H33.14l2.94-7.698h.98L40 49.888zm-2.108-5.957l-1.25 3.406h2.467z"/></g><g><path fill="#1a1919" d="M43.91 49.888h1.217V42.19H43.91z"/></g><g><path fill="#1a1919" d="M52.181 49.888l-3.705-5.417v5.417H47.26V42.19h1.115l3.706 5.408V42.19h1.217v7.698z"/></g><g><path fill="#1a1919" d="M57.568 50c-1.208 0-2.075-.32-2.838-1.068l.81-.767c.586.566 1.227.736 2.05.736 1.05 0 1.655-.434 1.655-1.178 0-.336-.097-.62-.312-.8-.205-.187-.407-.262-.88-.325l-.947-.13c-.655-.087-1.172-.302-1.522-.618C55.19 45.496 55 45 55 44.382c0-1.382 1-2.262 2.68-2.262 1.06 0 1.804.26 2.492.88l-.777.73c-.497-.453-1.07-.595-1.747-.595-.947 0-1.466.52-1.466 1.203 0 .28.09.529.304.714.201.171.514.303.902.356l.913.127c.699.11 1.16.285 1.5.574.438.368.652.891.652 1.583 0 1.415-1.208 2.308-2.885 2.308"/></g><g><path fill="#1a1919" d="M64.864 50C63.23 50 62 48.882 62 47.295V42.19h1.21v5.05c0 1.028.65 1.665 1.654 1.665 1.003 0 1.665-.637 1.665-1.665v-5.05h1.22v5.105c0 1.587-1.253 2.705-2.885 2.705"/></g><g><path fill="#1a1919" d="M74.188 49.888l-1.69-3.242H71v3.242h-1.24V42.19h3.111c1.52 0 2.49.938 2.49 2.249 0 1.1-.7 1.805-1.6 2.042l1.846 3.407zM71 43.238v2.41h1.78c.808 0 1.363-.442 1.363-1.199 0-.758-.555-1.212-1.363-1.212z"/></g><g><path fill="#1a1919" d="M81.779 49.888l-.554-1.546H78.06l-.553 1.546H76.21l2.944-7.698h.977l2.943 7.698zm-2.104-5.957l-1.256 3.406h2.476z"/></g><g><path fill="#1a1919" d="M89.174 49.888l-3.707-5.417v5.417H84.25V42.19h1.115l3.709 5.408V42.19h1.217v7.698z"/></g><g><path fill="#1a1919" d="M95 50c-.82 0-1.541-.345-2.094-.872-.79-.757-.776-1.612-.776-3.128 0-1.447-.015-2.302.776-3.06A2.979 2.979 0 0 1 95 42.12c1 0 1.657.346 2.256.88l-.812.817c-.444-.4-.765-.647-1.444-.647-.46 0-.887.173-1.17.463-.393.367-.472.854-.472 2.367 0 1.582.079 2 .47 2.437.284.294.712.464 1.172.464.679 0 1-.25 1.444-.648l.812.747c-.6.603-1.256 1-2.256 1"/></g><g><path fill="#1a1919" d="M98.92 49.888V42.19H104v1.047h-3.862v2.25h3.335v1.038h-3.335v2.315H104v1.048z"/></g><g><path fill="#1a1919" d="M113.26 49.064c-.564.572-1.26.936-2.186.936a2.888 2.888 0 0 1-2.074-.872c-.821-.756-.81-1.612-.81-3.128 0-1.447-.01-2.302.81-3.06.52-.526 1.218-.82 2.074-.82 1.093 0 1.702.324 2.423 1.015l-.822.791c-.508-.486-.88-.756-1.601-.756-.474 0-.912.184-1.193.473-.396.412-.472.844-.472 2.357 0 1.582.076 2 .472 2.436.281.295.72.465 1.193.465.53 0 .926-.192 1.284-.541.293-.36.395-.743.395-1.224v-.42h-1.68v-.992H114v1.155c0 .997-.21 1.641-.74 2.185"/></g><g><path fill="#1a1919" d="M120.178 49.888l-1.692-3.242H117v3.242h-1.25V42.19h3.107c1.523 0 2.49.938 2.49 2.249 0 1.1-.697 1.805-1.598 2.042l1.847 3.407zM117 43.238v2.41h1.769c.81 0 1.362-.442 1.362-1.199 0-.758-.552-1.212-1.362-1.212z"/></g><g><path fill="#1a1919" d="M127.86 49.128c-.55.528-1.262.872-2.116.872-.855 0-1.554-.345-2.107-.872-.791-.756-.777-1.612-.777-3.128 0-1.446-.014-2.302.777-3.06.553-.526 1.252-.82 2.107-.82.854 0 1.565.294 2.116.82.79.758.769 1.613.769 3.06 0 1.516.02 2.372-.769 3.128m-.93-5.484c-.281-.29-.72-.473-1.19-.473-.473 0-.91.184-1.192.473-.393.412-.471.843-.471 2.356 0 1.582.078 2 .47 2.426.283.291.719.475 1.193.475.47 0 .909-.184 1.19-.475.394-.426.473-.844.473-2.426 0-1.513-.08-1.944-.472-2.356"/></g><g><path fill="#1a1919" d="M133.222 50c-1.632 0-2.872-1.118-2.872-2.705V42.19h1.215v5.05c0 1.028.654 1.665 1.657 1.665 1.003 0 1.67-.637 1.67-1.665v-5.05h1.214v5.105c0 1.587-1.25 2.705-2.883 2.705"/></g><g><path fill="#1a1919" d="M141.151 46.863h-1.823v3.025h-1.218V42.19h3.041c1.567 0 2.57.995 2.57 2.331 0 1.346-1.003 2.342-2.57 2.342m-.073-3.626h-1.75v2.558h1.75c.845 0 1.418-.465 1.418-1.277 0-.807-.573-1.28-1.418-1.28"/></g></g></g></svg>
+                    </div>
+                    <div class="header__contacts m-hide">
+                        <div class="header__contacts-item">
+                            <div>Poistné udalosti - nonstop</div>
+                            <a href="tel:+421257299999">+421 2 5729 9999</a>
+                        </div>
+                        <div class="header__contacts-item">
+                            <div>Klientský portál</div>
+                            <a href="#" class="no-link" name="no-link">eKooperativa</a>
+                        </div>
+                    </div>
+                    <div class="header__hamburger m-show">
+                        <a href="#" class="no-link"><i class="fas fa-bars"></i></a>
+                    </div>
+                </div>                
+            </div>
+            <div class="header__bottom container m-hide">
+                <div class="header__bottom-inner">
+                    <nav class="header__menu">
+                        <ul class="menu">
+                            <li class="menu__item menu__item--dropdown">
+                                <a href="#" class="no-link">
+                                    Poinstenia
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="38" viewBox="0 0 46 38"><g><g><path fill="none" stroke="#c40109" stroke-dasharray="0 0" stroke-miterlimit="20" stroke-width="1.5" d="M30.92 15.15v0L23 22.946v0l-7.92-7.796v0"/></g></g></svg>
+                                    </span>
+                                </a>
+                                <ul class="menu__item-submenu">
+                                    <li>lorem</li>
+                                    <li>ipsum</li>
+                                    <li>dolor</li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="no-link">Magazín</a>
+                            </li>
+                            <li class="menu__item menu__item--dropdown">
+                                <a href="#" class="no-link">
+                                    O nás
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="38" viewBox="0 0 46 38"><g><g><path fill="none" stroke="#c40109" stroke-dasharray="0 0" stroke-miterlimit="20" stroke-width="1.5" d="M30.92 15.15v0L23 22.946v0l-7.92-7.796v0"/></g></g></svg>
+                                    </span>
+                                </a>
+                                <ul class="menu__item-submenu">
+                                    <li>lorem</li>
+                                    <li>dolor</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__buttons">
+                        <a href="#" class="no-link btn btn--secondary">Vybrať online</a>
+                        <a href="#" class="no-link btn">Pozrieť sa</a>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+        <div class="body">
+            <div class="layout__top">
+                <div class="breadcrumbs container">
+                    <div class="breadcrumbs__inner">
+                        <span class="breadcrumbs__item"><a href="#" class="no-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15"><g><g><path d="M6.333 8.795h3.334v5.548H6.333zM12 2.267h.667v1.21L12 3zM8 .74l6.333 4.84v8.763h-4V8.142H5.667v6.2h-4V5.58zM8 0c-.082 0-.15 0-.205.068L.128 5.926C0 6 0 6.242.071 6.384a.338.338 0 0 0 .468.057L1 6.09v8.58c0 .18.15.331.334.331h13.332c.185 0 .334-.15.334-.33V6.088l.461.352a.34.34 0 0 0 .33.045c.111-.044.209-.142.209-.257 0-.116 0-.229-.128-.303L13.333 4V1.614h-2v.844L8.205.068C8.143 0 8.066 0 8 0z"/></g></g></svg></a></span>
+                        <span class="breadcrumbs__divider"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30 26"><g><g><path fill="none" stroke="#404040" stroke-dasharray="0 0" stroke-miterlimit="20" d="M19.62 10.754v0L15 15.302v0l-4.62-4.548v0"/></g></g></svg></span>
+                        <span class="breadcrumbs__item"><a href="#" class="no-link">Dokumenty</a></span>
+                    </div>
+                </div>
+                <section class="banner banner--top container-fluid">
+                    <div class="banner__img">
+                    </div>
+                    <div class="banner__content">
+                        <div class="banner__content-inner container">
+                            <h1 class="banner__title">
+                                Vyhľadajte dokument
+                            </h1>
+                            <form class="form">
+                                <div class="form__inner">
+                                    <span class="form__search-wrap"><span class="form__search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><g><g><path d="M8.733 1.838c3.8 0 6.871 3.001 6.871 6.715 0 3.78-3.07 6.715-6.871 6.715-3.801 0-6.872-2.935-6.872-6.715 0-3.714 3.07-6.715 6.872-6.715zM8.786.333C4.123.333.333 4.036.333 8.593s3.79 8.26 8.453 8.26c1.845 0 3.547-.52 4.88-1.564l6.667 6.378 1.334-1.334-6.464-6.365a8.114 8.114 0 0 0 2.035-5.375c0-4.557-3.789-8.26-8.452-8.26z"/></g></g></svg></span><input class="form__serch" type="search" name="search" id="search" placeholder="Vyhľadávanie"/></span>
+                                    <input class="form__submit" type="submit" value="Hľadať">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="layout__main container">
+                <div class="row">
+                    <aside class="aside col col-12 col-md-3">
+                        <h2 class="side-menu__title">Typ dokumentov:</h2>
+                        <nav>
+                            <ul class="side-menu set-active-link-parent">
+                                <li class="side-menu__item"><a href="#" class="set-active-link">Hlásenie škody</a></li>
+                                <li class="side-menu__item"><a href="#" class="set-active-link active">Poistné podmienky</a></li>
+                                <li class="side-menu__item"><a href="#" class="set-active-link">Zmena a zánik poistnej zmluvy</a></li>
+                                <li class="side-menu__item"><a href="#" class="set-active-link">Predzmluvné dokumenty</a></li>
+                                <li class="side-menu__item"><a href="#" class="set-active-link">Povinné informácie</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+                    <main class="main col col-12 col-md-9">
+                        <div class="main__inner">
+                            <section class="filter">
+                                <h2>Kategória:</h2>
+                                <div class="filter__inner set-active-link-parent">
+                                    <span class="filter__item"><a href="#" class="set-active-link active">Auto</a></span>
+                                    <span class="filter__item"><a href="#" class="set-active-link">Cestovné poistenie</a></span>
+                                    <span class="filter__item"><a href="#" class="set-active-link">Život a zdravie</a></span>
+                                    <span class="filter__item"><a href="#" class="set-active-link">Poistenie bývania</a></span>
+                                    <span class="filter__item"><a href="#" class="set-active-link">Poistenie zodpovednosti</a></span>
+                                    <span class="filter__item"><a href="#" class="set-active-link">Poistenie podnikateľských rizík</a></span>
+                                    <span class="filter__item"><a href="#" class="set-active-link">Poistné zmluvy uzatvorené SLSP a PSS</a></span>
+                                </div>
+                            </section>
+                            <section class="conditions">
+                                <h2>Poistné podmienky:<strong>Auto</strong></h2>
+                                <div class="form-date">
+                                    <label>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g><g><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="20" stroke-width=".6" d="M15 2v0L9.667 7.364V15l-3.334-1.91v0-5.726 0L1 2v0-1 0h14v0z"/></g></g></svg>
+                                        <span>Zobraziť dokumenty aktuálne v deň podpísania zmluvy</span>
+                                    </label>
+                                    <input type="date" id="date" placeholder="Zadajte dátum">
+                                </div>
+                                <div class="conditions__switch set-active-link-parent">
+                                    <div class="conditions__switch-item">
+                                        <a href="#" class="set-active-link active">Aktuálne dokumenty</a>
+                                    </div>
+                                    <div class="conditions__switch-item">
+                                        <a href="#" class="set-active-link">Archív</a>
+                                    </div>
+                                </div>
+                                <div class="conditions__tabs">
+                                    <div class="conditions__tab text-toogle">
+                                        <div class="conditions__tab-header text-toogle-header">
+                                            <h3>Povinné zmluvné poistenie</h3>
+                                        </div>
+                                        <div class="conditions__tab-content">
+                                            <p>Content</p>
+                                        </div>
+                                    </div>
+                                    <div class="conditions__tab text-toogle active">
+                                        <div class="conditions__tab-header text-toogle-header">
+                                            <h3>Havarijné poistenie</h3>
+                                        </div>
+                                        <div class="conditions__tab-content">
+                                            <div class="conditions__table-wrap">
+                                                <table class="conditions__table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th><a href="no-link">Názov dukumentu</a></th>
+                                                            <th><a href="no-link">Platnosť</a></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><g><g><path fill="#c40109" d="M5.333 1.464l1.903 1.985H5.333zM.444 1.13H4.89v2.783h2.667v6.957H.444zM0 .667v10.666h8V3.587l-.063-.072L5.271.732 5.2.667z"/></g></g></svg>
+                                                                <span>IPID Havarijné poistenie Auto komplet 572_20190101_1</span>
+                                                            </td>
+                                                            <td>od 14.3.2022</td>
+                                                            <td><a href="" class="anchor-link">
+                                                                <span>Stiahnuť</span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><g><g><path fill="#c40109" d="M3.333 4.906c.12-.001.232.094.293.162.06.102.06.227 0 .329a.337.337 0 0 1-.293.162H.667v9.788h10.666V5.56H8.667a.337.337 0 0 1-.293-.162.324.324 0 0 1 0-.33c.06-.067.173-.162.293-.161H12V16H0V4.906zM6.23.089a.32.32 0 0 1 .104.249v9.972l2.094-2.05a.343.343 0 0 1 .48 0 .426.426 0 0 1 0 .47L6.24 11.34l-.24.224-.24-.224-2.666-2.61C3 8.646 3 8.518 3 8.398c0-.118.135-.207.26-.229a.34.34 0 0 1 .313.092l2.094 2.05V.337C5.663.183 5.772 0 5.927 0H6c.064 0 .159 0 .23.09z"/></g></g></svg>
+                                                            </a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><g><g><path fill="#c40109" d="M5.333 1.464l1.903 1.985H5.333zM.444 1.13H4.89v2.783h2.667v6.957H.444zM0 .667v10.666h8V3.587l-.063-.072L5.271.732 5.2.667z"/></g></g></svg>
+                                                                <span>IPID Havarijné poistenie Auto komplet 572_20190101_1</span>
+                                                            </td>
+                                                            <td>od 14.3.2022</td>
+                                                            <td><a href="" class="anchor-link">
+                                                                <span>Stiahnuť</span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><g><g><path fill="#c40109" d="M3.333 4.906c.12-.001.232.094.293.162.06.102.06.227 0 .329a.337.337 0 0 1-.293.162H.667v9.788h10.666V5.56H8.667a.337.337 0 0 1-.293-.162.324.324 0 0 1 0-.33c.06-.067.173-.162.293-.161H12V16H0V4.906zM6.23.089a.32.32 0 0 1 .104.249v9.972l2.094-2.05a.343.343 0 0 1 .48 0 .426.426 0 0 1 0 .47L6.24 11.34l-.24.224-.24-.224-2.666-2.61C3 8.646 3 8.518 3 8.398c0-.118.135-.207.26-.229a.34.34 0 0 1 .313.092l2.094 2.05V.337C5.663.183 5.772 0 5.927 0H6c.064 0 .159 0 .23.09z"/></g></g></svg>
+                                                            </a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><g><g><path fill="#c40109" d="M5.333 1.464l1.903 1.985H5.333zM.444 1.13H4.89v2.783h2.667v6.957H.444zM0 .667v10.666h8V3.587l-.063-.072L5.271.732 5.2.667z"/></g></g></svg>
+                                                                <span>IPID Havarijné poistenie Auto komplet 572_20190101_1</span>
+                                                            </td>
+                                                            <td>od 14.3.2022</td>
+                                                            <td><a href="" class="anchor-link">
+                                                                <span>Stiahnuť</span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><g><g><path fill="#c40109" d="M3.333 4.906c.12-.001.232.094.293.162.06.102.06.227 0 .329a.337.337 0 0 1-.293.162H.667v9.788h10.666V5.56H8.667a.337.337 0 0 1-.293-.162.324.324 0 0 1 0-.33c.06-.067.173-.162.293-.161H12V16H0V4.906zM6.23.089a.32.32 0 0 1 .104.249v9.972l2.094-2.05a.343.343 0 0 1 .48 0 .426.426 0 0 1 0 .47L6.24 11.34l-.24.224-.24-.224-2.666-2.61C3 8.646 3 8.518 3 8.398c0-.118.135-.207.26-.229a.34.34 0 0 1 .313.092l2.094 2.05V.337C5.663.183 5.772 0 5.927 0H6c.064 0 .159 0 .23.09z"/></g></g></svg>
+                                                            </a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="conditions__tab text-toogle">
+                                        <div class="conditions__tab-header text-toogle-header">
+                                            <h3>Majetok</h3>
+                                        </div>
+                                        <div class="conditions__tab-content">
+                                            <p>Content</p>
+                                        </div>
+                                    </div>
+                                    <div class="conditions__tab text-toogle">
+                                        <div class="conditions__tab-header text-toogle-header">
+                                            <h3>Cestovanie</h3>
+                                        </div>
+                                        <div class="conditions__tab-content">
+                                            <p>Content</p>
+                                        </div>
+                                    </div>
+                                    <div class="conditions__tab text-toogle">
+                                        <div class="conditions__tab-header text-toogle-header">
+                                            <h3>Zodpovednosť</h3>
+                                        </div>
+                                        <div class="conditions__tab-content">
+                                            <p>Content</p>
+                                        </div>
+                                    </div>
+                                    <div class="conditions__tab text-toogle">
+                                        <div class="conditions__tab-header text-toogle-header">
+                                            <h3>Život a úraz</h3>
+                                        </div>
+                                        <div class="conditions__tab-content">
+                                            <p>Content</p>
+                                        </div>
+                                    </div>
+                                    <div class="conditions__tab text-toogle">
+                                        <div class="conditions__tab-header text-toogle-header">
+                                            <h3>Insolventnosť cestovnej kancelárie</h3>
+                                        </div>
+                                        <div class="conditions__tab-content">
+                                            <p>Content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <div class="layout__bottom container">
+                <section class="banner-bottom">
+                    <div class="banner-bottom__row">
+                        <div class="banner-bottom__col">
+                            <h2>Potrebujete pomôcť?</h2>
+                            <a href="#" class="no-link">Kontakty</a>
+                        </div>
+                        <div class="banner-bottom__col">
+                            <div class="banner-bottom__svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32"><g><g><image width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAuRJREFUWEfF102oVWUYBeDnmj8JBYE6sh9qkEgDzUDDKNKMwgZShIVIOTErFCcVQn8KYaIiBVoZioligYUlqJOKJCNHCYYNAkFMAgkcSWCZxrp8O7bHc+4997QPd8OZ7HvOu9b3fmu977oDRvkZGGV87Qjk3SNYjxnYi5dxqR9k2xF4AdsK8Mc4VMhs7jeBcXgVq7GxkPgLb2A5HsDZpknUO/AcdmAFdrUAfYcbMB9/N0miTuAMtpfT/9MCMhvfYg229ovAn7gDf3QAeAdLMQsXmiJR78AprMX+DsXH4wiu4NF+EPgI04oFA9Lu2YLFuLUfBJ7GZ7gXP7cBmIDo5G3Eno089SuYjFxDnPB6S/Wx2InpmIOrjaBz3SR8Fh/iNlysgcQFsWIsuqcp8NRpNwm/LidchDgjT4ZQ3mdINdb+TgTmlfH7EnbXTptRvAQP4nRTXei0jFYVHTyOEwUsOsigyrt82gl1xLw6reMoPo64u3j+91J5Eg7gJjxVXDFi0PoPhsoDccUx/IaFtR1wM77CVDz2f0kMF0juweGyB16sZYLb8QluwTKc7LUNwxFI3Zn4sQBGmNWTToTcXXioJszUjF3fxC94Zqjd0Q2BAD5RNBERvlIjEU0kO+SKskdi25VIh/YV8iG4qdj3cmunuiWQ3yULfFkKZx5UES3ueLcAZ0JmmSXAJMxkgYVYvn8cz+NctyJsd63pxOelG4lu9XCSYRXQn9CaJ+5H5kg6815JW4MHGEkHKkLRxEH8iqSoyqLd6HAdMmO+KF3qiUCA4o4UyUkTUqphNRyJMUg3kq5u7LUDFciUIqy5eK3cfbU7OhGZiCp3hEjPHagAMjFjuQ34AU+2bNFWIknd+X8jo/ybJghUNR4uu+M+fFBEmmxRJas4JQ4IeGJ+MsdgpuhFhEPdc/LE+8h8+L6o/WgRXAT4VrHsfzWaJpDC2SHpyIKyuu/E+QL+Ka4ZRv0gMJwTrvn7qBP4F0hRiyGwXAJjAAAAAElFTkSuQmCC"/></g></g></svg>
+                            </div>
+                            <div class="banner-bottom__link">
+                                <p>Telefonický kontakt</p>
+                                <a href="tel:+421257299999">+421 2 5729 9999</a>
+                            </div>
+
+                        </div>
+                        <div class="banner-bottom__col">
+                            <div class="banner-bottom__svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32"><g><g><image width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAXlJREFUWEft1z9IVlEYx/HPi9GgUCDq5CAI/VldhFwcRXEJTLGhLQKXIB1EHU1RRAdd2gIFCVwEBxGcdYm2UlFoK3RwUEFUigPnlbcX8f1n3uWe6XK5z/N8z+/5PYdzMxJemYTrSwGCAhNJtiEA/MERLu8Z5AHqsgDP8eOeAZ7hewqQq0ALnuIzDv5TO5rwBjv4lt+CeqzjDOOYx8UdgQTDDWAMNejA75s8UIv3eBtVmMUqzssEeYjumDOY7hPmcIhbTViNZXRiG6/xM45sMSyhtY1YRBs20IOTnOCCU1CFdgyiFSuYwl4BguYY8wpfMY3NG86ZggC5dXoxiUcYxhcc54E8xssIeYoRLN0CWxJAyNOAfnzEPmZigXCS9mEITzAa3/8qoFTJANl8dQjm7MJW9MULrOFDdHcxPikbICQPYxV2uxCf32G3xLGtCCC7w2DUsK6K2XLeN3cCUEbd65AUIFUgVeAfBRK9lCZ+La/kMKk4Nv01S1yBv+qqdhlbdEMpAAAAAElFTkSuQmCC"/></g></g></svg>
+                            </div>
+                            <div class="banner-bottom__link">
+                                <p>E-mailový kontakt</p>
+                                <a href="mailto:mail@mail.com">Napíšte nám</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__left">
+                        <h2>Produkty a služby</h2>
+                        <div class="custom-row">
+                            <div class="custom-col">
+                                <ul>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Životné poistenie</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Variant Kapitál</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Profi komplet</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Skoré uzdravenie</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Nádej</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Detské poistenie Dukátik</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Silencium<br>Investičné životné poistenie</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Profi invest<br>Investičné životné poistenie </a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Moja investícia</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Vodič plus </a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Pripoistenia</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="custom-col">
+                                <ul>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie zodpovednosti</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie zodpovednosti za škodu spôsobenú zamestnávateľovi pri výkone povolania</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie profesijných 
+                                            zodpovedností</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie zodpovednosti za
+                                            environmentálnu škodu Enviro max</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="custom-col">
+                                <ul>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie auta</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Komplexné poistenie</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">AutoMat</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Povinné zmluvné poistenie</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Havarijné poistenie Auto komplet</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Havarijné poistenie ojazdených áut MINI KASKO</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie finančnej straty </a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">GAP</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Vodič plus</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="custom-col">
+                                <ul>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Bankopoistenie</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Bankopoistenie</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="custom-col">
+                                <ul>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie pre firmy</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie podnikania</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Profesionál<br>Poistenie podnikania </a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Podnikateľ<br>Poistenie profesijných zodpovedností</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie zodpovednosti za environmentálnu škodu Enviro max</a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                            <div class="custom-col">
+                                <ul>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Poistenie majetku</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Bezstarostný domov</a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                            <div class="custom-col">
+                                <ul>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Cestovné poistenie</a>
+                                    </li>
+                                    <li class="footer__link">
+                                        <a href="#" class="no-link">Cestovné poistenie MARCO POLO</a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__right">
+                        <div class="footer__right-inner">
+                            <div class="custom-row">
+                                <div class="custom-col custom-col--6">
+                                    <h2>Produkty a služby</h2>
+                                    <ul>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Poistné udalosti</a>
+                                        </li>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Kontakty</a>
+                                        </li>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Pobočky / servisy</a>
+                                        </li>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Rychlé dotazy</a>
+                                        </li>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Kariéra</a>
+                                        </li> 
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Fondy</a>
+                                        </li> 
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Flash news</a>
+                                        </li>                                    
+                                    </ul>
+                                </div>
+                                <div class="custom-col custom-col--6">
+                                    <h2>Dôležité odkazy</h2>
+                                    <ul>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Ochrana osobných údajov</a>
+                                        </li>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Dokumenty</a>
+                                        </li>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Partneri</a>
+                                        </li>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">Informácie o používaní</a>
+                                        </li>
+                                        <li class="footer__link">
+                                            <a href="#" class="no-link">cookies</a>
+                                        </li>    
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer__right-info">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="159" height="56" viewBox="0 0 159 56"><g><g><g><path fill="#d8232a" d="M146.458 23.853h-10.882L141 14.417zM138.85 10.65a10.232 10.232 0 0 0-6.717 4.92l-.01.022L123.24 31h8.227l1.944-3.384A10.27 10.27 0 0 0 141 31h17.8l-4.115-7.147h-3.888a10.287 10.287 0 0 0-.889-8.283l-.008-.032L141 .15l-4.099 7.127z"/></g><g><path fill="#d8232a" d="M25.737 24.38c0 3.938-1.998 6.847-5.808 6.847-3.814 0-5.829-2.91-5.829-6.847 0-3.939 2.015-6.83 5.794-6.83 3.845 0 5.843 2.893 5.843 6.83M22 24.332c0-2.332-.388-4.401-2.071-4.401-1.71 0-2.033 2.069-2.033 4.4 0 2.37.364 4.309 2.033 4.309 1.683 0 2.071-1.94 2.071-4.308"/></g><g><path fill="#d8232a" d="M38.336 24.38c0 3.938-2.003 6.847-5.813 6.847-3.813 0-5.813-2.91-5.813-6.847 0-3.939 2-6.83 5.777-6.83 3.846 0 5.85 2.893 5.85 6.83m-3.783-.048c0-2.332-.35-4.401-2.03-4.401-1.686 0-2.023 2.069-2.023 4.4 0 2.37.372 4.309 2.022 4.309 1.682 0 2.032-1.94 2.032-4.308"/></g><g><path fill="#d8232a" d="M51.278 24.302c0 4.234-2.372 6.85-5.788 6.85-.805 0-1.49-.092-1.912-.21v5.305H39.76V18.53c1.129-.531 2.694-.981 5.04-.981 3.927 0 6.478 2.327 6.478 6.751m-3.776.047c0-2.957-.726-4.546-2.761-4.546-.501 0-.846.075-1.16.198v8.721c.253.104.594.174 1.003.174 2.017 0 2.918-1.592 2.918-4.547"/></g><g><path fill="#d8232a" d="M63.78 24.064c0 .167-.007.364-.007.53l-7.896 1.126c.263 1.937 1.243 2.892 3.176 2.892 1.539 0 2.713-.339 3.42-.714l.88 2.373c-1.054.544-2.52.956-4.75.956-4.03 0-6.343-2.663-6.343-6.874 0-4.135 2.143-6.803 5.94-6.803 3.8 0 5.58 2.546 5.58 6.514m-3.552-.91c0-2.327-.758-3.35-2.228-3.35-1.499 0-2.488 1.342-2.374 4.079l4.602-.729"/></g><g><path fill="#d8232a" d="M72.3 17.608c-3.544-.166-5.595.223-7.06.932V31H69V20.228c.684-.29 1.659-.32 2.587.073l.713-2.694"/></g><g><path fill="#d8232a" d="M83.338 30.254c-1.094.584-2.878.973-5.152.973-3.811 0-5.766-1.42-5.766-4.158 0-3.4 3.394-4.402 7.354-4.77v-.613c0-1.37-.93-1.756-2.319-1.756-1.269 0-2.563.41-3.455.805l-.797-2.181a12.602 12.602 0 0 1 4.956-1.004c2.973 0 5.179 1.254 5.179 4.823zm-3.564-6.185c-2.306.218-3.774.753-3.774 2.858 0 1.538.86 2.2 2.373 2.2.56 0 1.055-.127 1.4-.271z"/></g><g><path fill="#d8232a" d="M91.865 30.81v-2.35c-.324.096-.486.144-.81.144-.866 0-1.216-.543-1.216-1.542V20.26h2.026v-2.47h-2.026V14L86 15v2.788h-1.42v2.471H86v7.101c0 2.028 1.225 3.816 4 3.816.867 0 1.54-.176 1.865-.368"/></g><g><path fill="#d8232a" d="M93.232 17.794H97V31h-3.768zM97.16 14c0 1-.906 1.802-2.026 1.802C94 15.802 93.11 15 93.11 14s.89-1.78 2.025-1.78c1.12 0 2.025.78 2.025 1.78z"/></g><g><path fill="#d8232a" d="M110 17.8h-3.554l-1.939 7.587c-.16.613-.273 1.327-.336 2.002h-.053s-.038-.977-.283-2.002l-1.89-7.587H97.92l4.209 13.2h3.696L110 17.8"/></g><g><path fill="#d8232a" d="M121.107 30.254c-1.107.584-2.89.973-5.158.973-3.81 0-5.769-1.42-5.769-4.158 0-3.4 3.39-4.402 7.345-4.77v-.613c0-1.37-.924-1.756-2.306-1.756-1.277 0-2.576.41-3.433.805L111 18.554a12.307 12.307 0 0 1 4.927-1.004c2.963 0 5.18 1.254 5.18 4.823zm-3.573-6.185c-2.294.218-3.797.753-3.797 2.858 0 1.538.89 2.2 2.416 2.2.557 0 1.053-.127 1.38-.271z"/></g><g><path fill="#d8232a" d="M14.446 31l-5.624-8.403 5.235-7.093H9.594l-4.829 7.094h-.067V15.5H.19V31h4.508v-8.115h.068L9.558 31z"/></g><g><path fill="#d8232a" d="M.2 40.72h158.51v-2.417L.2 38.3z"/></g><g><path fill="#1a1919" d="M4.186 55.09H3.143L.23 46.59h1.39l2.046 6.186 2.041-6.186h1.415z"/></g><g><path fill="#1a1919" d="M8.38 55.09h1.342v-8.5H8.38z"/></g><g><path fill="#1a1919" d="M12.07 55.09v-8.5h5.663v1.156h-4.317v2.483h3.68v1.148h-3.68v2.555h4.317v1.158z"/></g><g><path fill="#1a1919" d="M25 55.09l-4-5.98v5.98h-1.39v-8.5h1.234l4.093 5.97v-5.97h1.345v8.5z"/></g><g><path fill="#1a1919" d="M34.068 55.09L30 49.11v5.98h-1.37v-8.5h1.23L34 52.56v-5.97h1.3v8.5z"/></g><g><path fill="#1a1919" d="M42.745 55.09l-.613-1.707H38.64L38 55.09h-1.4l3.245-8.5h1.084l3.246 8.5zm-2.328-6.578L39 52.272h2.76z"/></g><g><path fill="#1a1919" d="M48.49 55.09h1.344v-8.5H48.49z"/></g><g><path fill="#1a1919" d="M57.624 55.09l-4.092-5.98v5.98H52.19v-8.5h1.231l4.092 5.97v-5.97h1.344v8.5z"/></g><g><path fill="#1a1919" d="M63.564 55.16c-1.334 0-2.291-.303-3.134-1.16l.895-.815C62 53.81 62.68 54 63.587 54c1.161 0 1.829-.481 1.829-1.304 0-.37-.108-.696-.346-.883-.225-.207-.449-.289-.971-.358l-1.046-.143c-.722-.097-1.294-.312-1.68-.683-.434-.392-.647-.929-.647-1.629 0-1.473 1.122-2.49 2.962-2.49 1.17 0 1.99.286 2.75.967l-.858.811c-.58-.5-1.18-.658-1.928-.658-1.046 0-1.652.574-1.652 1.37 0 .269.133.543.369.748.222.189.631.334.996.392l1.008.141c.823.121 1.28.314 1.627.634.512.406.75 1.016.75 1.748 0 1.562-1.334 2.496-3.186 2.496"/></g><g><path fill="#1a1919" d="M71.623 55.167c-1.804 0-3.173-1.167-3.173-2.94V46.59h1.346v5.576c0 1.135.72 1.834 1.827 1.834 1.108 0 1.839-.699 1.839-1.834V46.59h1.346v5.637c0 1.773-1.382 2.94-3.185 2.94"/></g><g><path fill="#1a1919" d="M81.92 55.09l-1.866-3.58h-1.683v3.58H77v-8.5h3.466c1.678 0 2.748 1.035 2.748 2.483 0 1.215-.772 1.994-1.766 2.255l2.038 3.762zm-3.549-7.344v2.662h1.993c.893 0 1.506-.488 1.506-1.324 0-.836-.613-1.338-1.506-1.338z"/></g><g><path fill="#1a1919" d="M90.3 55.09l-.613-1.707h-3.495l-.61 1.707H84.15l3.25-8.5h1.08l3.25 8.5zM88 48.512l-1.41 3.76h2.733z"/></g><g><path fill="#1a1919" d="M98.457 55.09l-4.093-5.98v5.98H93v-8.5h1.25l4.096 5.97v-5.97h1.344v8.5z"/></g><g><path fill="#1a1919" d="M104.903 55.16c-.903 0-1.716-.33-2.326-.912-.873-.836-.857-1.78-.857-3.416 0-1.635-.016-2.58.857-3.416.61-.581 1.423-.906 2.326-.906 1.097 0 1.815.382 2.477 1.002l-.897.871c-.483-.44-.845-.714-1.58-.714-.523 0-.994.192-1.306.511-.434.458-.521.943-.521 2.652 0 1.71.087 2.168.52 2.653.312.324.785.515 1.306.515.736 0 1.098-.278 1.581-.718l.896.87c-.66.62-1.379 1.007-2.477 1.007"/></g><g><path fill="#1a1919" d="M109.22 55.09v-8.5h5.662v1.156h-4.317v2.483h3.682v1.148h-3.682v2.555h4.317v1.158z"/></g><g><path fill="#1a1919" d="M125.058 54.177c-.623.632-1.442.982-2.414.982-.92 0-1.716-.329-2.326-.911-.87-.835-.858-1.78-.858-3.416 0-1.635-.012-2.58.858-3.416.61-.581 1.381-.906 2.326-.906 1.208 0 1.88.358 2.676 1.12l-.908.874c-.561-.504-.97-.835-1.768-.835-.523 0-1.007.204-1.316.523-.438.455-.522.932-.522 2.64 0 1.71.084 2.168.522 2.652.31.325.793.516 1.316.516.586 0 1.072-.215 1.418-.6.324-.346.436-.82.436-1.4v-.415h-1.854V50.49h3.198v1.276c0 1.1-.199 1.812-.784 2.412"/></g><g><path fill="#1a1919" d="M132.689 55.09l-1.868-3.58h-1.679v3.58H127.8v-8.5h3.43c1.683 0 2.77 1.035 2.77 2.483 0 1.215-.79 1.994-1.784 2.255l2.039 3.762zm-3.547-7.344v2.662h1.99c.868 0 1.506-.488 1.506-1.324 0-.836-.638-1.338-1.505-1.338z"/></g><g><path fill="#1a1919" d="M141.181 54.248c-.608.583-1.394.911-2.337.911-.943 0-1.716-.329-2.326-.91-.873-.836-.858-1.78-.858-3.416s-.015-2.58.858-3.417c.61-.581 1.383-.906 2.326-.906.943 0 1.729.325 2.337.906.872.837.819 1.78.819 3.417 0 1.635.053 2.58-.819 3.415m-1.026-6.055c-.311-.32-.795-.523-1.315-.523-.523 0-1.004.203-1.316.523-.434.454-.524.93-.524 2.64 0 1.709.09 2.167.523 2.64.313.322.793.527 1.317.527.52 0 1.004-.205 1.315-.527.433-.473.52-.931.52-2.64 0-1.71-.087-2.186-.52-2.64"/></g><g><path fill="#1a1919" d="M147.09 55.167c-1.8 0-3.17-1.167-3.17-2.94V46.59h1.342v5.576c0 1.135.738 1.834 1.829 1.834 1.107 0 1.844-.699 1.844-1.834V46.59h1.34v5.637c0 1.773-1.38 2.94-3.183 2.94"/></g><g><path fill="#1a1919" d="M155.858 51.75h-2.014v3.34H152.5v-8.5h3.358c1.73 0 2.837 1.098 2.837 2.574 0 1.486-1.107 2.586-2.837 2.586m-.08-4.004h-1.934v2.825h1.934c.933 0 1.565-.514 1.565-1.411 0-.89-.632-1.413-1.565-1.413"/></g></g></g></svg>
+                                <p>KOOPERATIVA poisťovňa, a.s. Vienna Insurance Group, Štefanovičova 4, 816 23 Bratislava, IČO: 00 585 441, DIČ: 2020527300, IČ DPH: SK7020000746, GIIN: EM4SY0.00023.ME.703</p>
+                                <p>Copyright © 2022 KOOPERATIVA poisťovňa, a.s. Vienna Insurance Group</p>
+                                <div class="footer__social">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <i class="fab fa-instagram"></i>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
+</html>

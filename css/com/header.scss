@@ -1,0 +1,48 @@
+@import '../lib/mixins';
+
+.header {
+    box-shadow: 0 12px 50px rgba(51, 57, 75, 0.07);
+    padding: 20px 0;
+
+    &__top, &__bottom {
+
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__top {
+        margin-bottom: 20px;
+    }
+
+    &__contacts {
+        display: flex;
+
+        &-item {
+            @include font-size(12);
+            line-height: 1.33333333;
+            font-weight: 400;
+
+            a {
+                @include font-size(16);
+                font-weight: 500;
+                line-height: 1.5;
+                color: #000;
+            }
+
+            &:not(:first-of-type) {
+                margin-left: 34px;
+            }
+        }
+    }
+
+    &__hamburger {
+        a {
+            font-size: 22px;
+            color: $black;
+            text-decoration: none;
+        }
+    }
+}

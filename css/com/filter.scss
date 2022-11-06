@@ -1,0 +1,43 @@
+@import '../lib/vars';
+@import '../lib/mixins';
+
+.filter {
+    padding-bottom: 30px;
+    border-bottom: 3px solid #f1f1f1;
+    margin-bottom: 30px;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    &__item {
+        display: block;
+
+        a {
+            @include font-size(15);
+            color: $white;
+            font-weight: 500;
+            line-height: 1.86666666;
+            text-decoration: none;
+            background-color: $black;
+            border: 3px solid $black;
+            padding: 1px 12px;
+            border-radius: 18px;
+            transition: all 200ms ease;
+            display: block;
+
+            &:hover {
+                border-color: $primary;
+            }
+    
+            &.active {
+                background-color: $primary;
+                border-color: $primary;
+            }
+        }
+        
+    }
+}
